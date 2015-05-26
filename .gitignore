@@ -1,6 +1,6 @@
 /services/piserver/src
 /images/[^.]*
-/config/[^.]*
+/config/[^.]*.yml
 config.yml
 *.pyc
 .DS_Store

@@ -73,11 +73,11 @@ install and start all services with `fab pi setup:install_services`
 
 # Screens
 ### Desktop
-![Desktop](http://5.45.97.194/gitlab/pi-tank/pi-setup/raw/master/services/setup/screens/desktop.png)
+![Desktop](https://github.com/creative-workflow/pi-setup/blob/master/services/setup/screens/desktop.png)
 ### Backup
-![Backup](http://5.45.97.194/gitlab/pi-tank/pi-setup/raw/master/services/setup/screens/backup.png)
+![Backup](https://github.com/creative-workflow/pi-setup/blob/master/services/setup/screens/backup.png)
 ### Mobile
-![Mobile](http://5.45.97.194/gitlab/pi-tank/pi-setup/raw/master/services/setup/screens/mobile.png)
+![Mobile](https://github.com/creative-workflow/pi-setup/blob/master/services/setup/screens/mobile.png)
 
 ### services
 #### backup/restore
