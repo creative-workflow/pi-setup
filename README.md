@@ -57,7 +57,7 @@ install and start all services with `fab pi setup:install_services`
 ->goto [your pi-ip]:8081
 `fab pi picam:enable_autostart`
 
-* install piserver service
+* install piserver service (not yet ready, TODO refactor and move to github)
 `fab pi piserver:install`
 `fab pi piserver:start`
 ->goto [your pi-ip]:8000
@@ -109,7 +109,7 @@ connect your pi sd card and
 `picam:stop`                  stop the the service
 `picam:uninstall`             removes service files from remote service folder
 `picam:update`                copy service files to remote service folder
-#### piserver
+#### piserver (TODO refactor and move to github)
 `piserver:disable_autostart`  disable automatic start of this service
 `piserver:enable_autostart`   enable automatic start of this service
 `piserver:install`            checkout and setup simple pi server

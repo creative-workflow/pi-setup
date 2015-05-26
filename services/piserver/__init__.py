@@ -10,7 +10,8 @@ class PiServerService(PiService):
                       'libopencv-dev', 'v4l-utils', 'ffmpeg', 'python-imaging', 'libc6-dev',
                       'python-opencv','git-core', 'git']
 
-  git_repo = 'git@5.45.97.194:pi-tank/pi-server.git'
+  #TODO refactor and move to github
+  git_repo = 'git@github.com:creative-workflow/pi-server.git'
 
   def install(self):
     """checkout and setup simple pi server"""
