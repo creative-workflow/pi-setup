@@ -1,0 +1,10 @@
+interface: auto
+enabled: 1
+start: 192.168.42.2 # This is the range of IPs that the hotspot will give to client devices.
+end: 192.168.42.23
+remaining: 'yes'
+opt:
+  dns: 8.8.4.4 #it will be a problem if you pass mor then once, because of lib.config.RemoteWhitespaceConfigLoader implementation
+  subnet: 255.255.255.0
+  router: 192.168.42.1 # The Pi's IP address on wlan0 which we will set up shortly.
+  lease: 864000 # 10 day DHCP lease time in seconds

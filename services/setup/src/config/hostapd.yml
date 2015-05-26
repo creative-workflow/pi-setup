@@ -1,0 +1,13 @@
+interface: auto
+ssid: pi-tank-m1
+driver: nl80211 #rtl871xdrv for edimax, automatic replacement if detected
+hw_mode: g
+channel: 11
+macaddr_acl: 0
+auth_algs: 1
+ignore_broadcast_ssid: 0
+wpa: 2
+wpa_passphrase: pi-tank-m1 #min 8 chars
+wpa_key_mgmt: WPA-PSK
+wpa_pairwise: TKIP
+rsn_pairwise: CCMP

@@ -1,0 +1,7 @@
+/services/piserver/src
+/images/[^.]*
+/config/[^.]*
+config.yml
+*.pyc
+.DS_Store
+venv*

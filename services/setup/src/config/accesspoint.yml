@@ -1,0 +1,7 @@
+autostart_if_no_ip: 1
+uses_service:
+  - wlan
+  - lan
+  - udhcpd
+  - hostapd
+  - nat

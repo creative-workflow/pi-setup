@@ -1,0 +1,10 @@
+interface: auto   #wlan0 The device udhcp listens on.
+module: auto      #detection for info not used practically
+networks: #TODO
+  -
+    ssid: "..."
+    psk: "..."
+    proto: RSN
+    key_mgmt: WPA-PSK
+    pairwise: CCMP
+    auth_alg: OPEN

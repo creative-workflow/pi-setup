@@ -1,0 +1,5 @@
+enabled: 1
+mappings:
+  -
+    from: auto
+    to: auto

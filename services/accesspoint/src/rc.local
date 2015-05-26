@@ -1,0 +1,15 @@
+# Print the IP address
+sleep 5
+_IP=$(hostname -I) || true
+if [ "$_IP" ]; then
+  printf "My IP address is $_IP"
+fi
+
+if [ "$_IP" ]; then
+  echo "[Access Point Setup] - The wifi is already connected, no access point needed"
+else
+  echo "[Access Point Setup] - The wifi is not connected, firing up an access point..."
+  sudo ifconfig %(interface)s %(router)s
+  sudo service hostapd start
+  sudo service udhcpd start
+fi
