@@ -65,14 +65,16 @@ class PiService(FabricTaskOperator, PiServicePolicies):
 
   def install(self, deploy=True):
     """setup the the pi-setup-service"""
+    if self.is_local():
+      return
+
     self.api.run('mkdir -p '+self.remote_path)
 
     if self.apt_get_install:
       #set the correct terminal, so no notices like "Unable to initialise frontend: Dialog" etc
       self.run('export TERM=linux && sudo apt-get -y install '+(' '.join(self.apt_get_install)))
 
-    if not self.is_local():
-      PiService.deploy(self, restart=False)
+    PiService.deploy(self, restart=False)
 
   def deploy(self, restart=True):
     """copy service files to remote service folder"""

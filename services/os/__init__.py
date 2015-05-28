@@ -12,8 +12,9 @@ class OsService(PiService):
 
   def install(self):
     #PiService.install(self)
-    self.deploy()
-    self.sudo('update-alternatives --install /usr/bin/python python /usr/bin/python2.7 10')
+    if not self.is_local():
+        self.deploy()
+        self.sudo('update-alternatives --install /usr/bin/python python /usr/bin/python2.7 10')
 
   def stop(self):
     """shout down the pi"""
