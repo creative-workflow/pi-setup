@@ -22,18 +22,18 @@ def from_file(file_name, defaults={}):
 
   return config_dict
 
-def get(key=None):
+def get(key=None, default=None):
   global config_dict
   if not key: return config_dict
+  if not config_dict or not config_dict.has_key(key): return default
   return config_dict[key]
 
 
 #loading the project config with default values
-from_file(config_file, {'fabric': {
-                            'hosts': ['localhost']},
-                            'services':{'path': './services'},
-                            'stages': {'default':{}
-                          }
-                       })
-
-
+if os.path.isfile(config_file):
+    from_file(config_file, {'fabric': {
+                                'hosts': ['localhost']},
+                                'services':{'path': './services'},
+                                'stages': {'default':{}
+                              }
+                           })

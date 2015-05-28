@@ -44,8 +44,9 @@ class SetupService(PiService):
 
   def __local_setup(self):
     self.ops.local("mkdir -p ./images")
-    self.ops.local("test ! -f ./config.yml && cp ./services/pisetup/src/config.yml.tpl ./config.yml || true")
-    self.ops.local("test ! -d ./config && cp -R ./services/pisetup/src/config/* ./config/ || true")
+    self.ops.local("test ! -f ./config.yml && cp ./services/setup/src/config.yml.tpl ./config.yml || true")
+    self.ops.local("mkdir -p ./config")
+    self.ops.local("cp -Rn ./services/setup/src/config/* ./config/ || true")
 
   def __remote_setup(self):
     self.sudo('pip install --upgrade pip')

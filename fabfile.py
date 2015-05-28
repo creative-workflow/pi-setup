@@ -11,7 +11,8 @@ import piservices, config
 env.config = config.get()
 
 #merge febric section from config
-env.update(config.get('fabric'))
+if config.get('fabric'):
+  env.update(config.get('fabric'))
 
 
 @fabric.api.task(default=True)

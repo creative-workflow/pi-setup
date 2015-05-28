@@ -43,7 +43,7 @@ class PiService(FabricTaskOperator, PiServicePolicies):
 
   def _init_service(self):
     self.config = {}
-    if config.get('services').has_key(self.name):
+    if config.get() and config.get('services').has_key(self.name):
       self.config = config.get('services')[self.name]
 
     self.remote = RemoteFileHelper(self)
