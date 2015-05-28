@@ -4,6 +4,6 @@ python:
 
 install:
   - "pip install -r requirements.txt"
-  - "fab setup:install "
+  - "cp ./services/setup/src/config.yml.tpl ./config.yml "
 
 script: fab test
