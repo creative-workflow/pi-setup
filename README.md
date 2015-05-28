@@ -1,4 +1,4 @@
-# pi-setup
+# pi-setup [![Build Status](https://travis-ci.org/creative-workflow/pi-setup.svg)](https://travis-ci.org/creative-workflow/pi-setup) [![Code Climate](https://codeclimate.com/github/creative-workflow/pi-setup/badges/gpa.svg)](https://codeclimate.com/github/creative-workflow/pi-setup)
 
 ## fabric usage
 call `fab` to see a list of all available commands and options
